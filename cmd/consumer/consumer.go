@@ -5,13 +5,12 @@ import (
 	"encoding/json"
 	"fmt"
 	"go-kafka-example/config"
-	"go-kafka-example/pkg/controllers"
 	"go-kafka-example/pkg/models"
 	"go-kafka-example/utils"
 	"log"
+	"net/http"
 
 	"github.com/IBM/sarama"
-	"github.com/labstack/echo/v4"
 )
 
 // Implements sarama.ConsumerGroupHandler.
@@ -117,18 +116,10 @@ func main() {
 	fmt.Printf("Kafka CONSUMER (Group: %s) 👥📥 "+
 		"started at http://localhost%s\n", config.ConsumerGroup, config.ConsumerPort)
 
-	// routes
-	e := echo.New()
-	e.GET("/addresses/:address", controllers.GetAddress(models.AddressDB))
-	e.GET("/addresses", controllers.GetAddresses(models.AddressDB))
-
-	// LabelRoutes(e)
-	e.GET("/labels/:label", controllers.GetLabel(models.LabelDB))
-	e.GET("/labels", controllers.GetLabels(models.LabelDB))
-	// TransactionRoutes(e)
-	e.GET("/transactions/:hash", controllers.GetTransaction(models.TransactionDB))
-	e.GET("/transactions", controllers.GetTransactions(models.TransactionDB))
-
-	e.Logger.Fatal(e.Start(config.ConsumerPort))
+	// Use a blocking operation to serve HTTP requests, which keeps the program running
+    if err := http.ListenAndServe(":8081", nil); err != nil {
+        log.Fatal(err)
+    }
+	
 
 }
