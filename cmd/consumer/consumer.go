@@ -117,9 +117,8 @@ func main() {
 		"started at http://localhost%s\n", config.ConsumerGroup, config.ConsumerPort)
 
 	// Use a blocking operation to serve HTTP requests, which keeps the program running
-    if err := http.ListenAndServe(":8081", nil); err != nil {
-        log.Fatal(err)
-    }
-	
+	if err := http.ListenAndServe(":8081", nil); err != nil {
+		log.Fatal(err)
+	}
 
 }

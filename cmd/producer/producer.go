@@ -44,7 +44,7 @@ func main() {
 	// LabelRoutes(e)
 	e.GET("/labels/:label", controllers.GetLabel(models.LabelDB))
 	e.GET("/labels", controllers.GetLabels(models.LabelDB))
-	
+
 	// TransactionRoutes(e)
 	e.GET("/transactions/:hash", controllers.GetTransaction(models.TransactionDB))
 	e.GET("/transactions", controllers.GetTransactions(models.TransactionDB))
