@@ -51,7 +51,7 @@ The producer, operating on port 8080, receives REST API requests from users, sen
 - `/labels`: `GET`
 - `/labels/:label`: `GET`, `POST`, `PUT`, `DELETE`
 - `/transactions`: `GET`
-- `/transactions/:transaction`: `GET`, `POST`, `PUT`, `DELETE`
+- `/transactions/:hash`: `GET`, `POST`, `PUT`, `DELETE`
 
 ## Project structure
 - `/cmd`
