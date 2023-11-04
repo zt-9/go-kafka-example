@@ -8,9 +8,14 @@ We use Redis as in memory database to store data.
 The producer runs on port 8080 and the consumer runs on port 8081. 
 Users send REST API requests to producer. Producer then send messages to consumer.
 
+
 ## Prerequistes
 - docker ([install](https://docs.docker.com/engine/install/))
-
+## stack
+- [bitnami/kafka](https://hub.docker.com/r/bitnami/kafka): kafka docker image
+- [ibm/sarama](https://github.com/IBM/sarama): Go library for Apache Kafka
+- [echo](https://echo.labstack.com/): go webframework. We used it to build REST API.
+- [redis](https://redis.uptrace.dev/guide/go-redis.html): for in memory database
 ## Run the application
 1. start docker img: 
     ```bash
@@ -39,8 +44,16 @@ Users send REST API requests to producer. Producer then send messages to consume
     ```
 
     get an address:
-    
+
     send GET request to `localhost:8081/addresses/0x87631B45877794f9cdd50a70c827403e3C36d072`   
+## REST API endpoints
+- port: `localhost:8080`
+- `/addresses`: `GET`
+- `/addresses/:address`: `GET`, `POST`, `PUT`, `DELETE`
+- `/labels`: `GET`
+- `/labels/:label`: `GET`, `POST`, `PUT`, `DELETE`
+- `/transactions`: `GET`
+- `/transactions/:transaction`: `GET`, `POST`, `PUT`, `DELETE`
 
 ## Project structure
 - `/cmd`
