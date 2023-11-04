@@ -28,22 +28,22 @@ The producer, operating on port 8080, receives REST API requests from users, sen
     make run/consumer
     ```
 4. send api requests to localhost:8080
-    examples:
-    create an address:
+   
+    For example:
+   
+    - create an address:
+        send POST request to `localhost:8080/addresses/0x87631B45877794f9cdd50a70c827403e3C36d072`
+        with body
+        ```json
+        {
+        "address": "0x87631B45877794f9cdd50a70c827403e3C36d072",
+        "labels": ["eoa"]
+        
+        }
+        ```
 
-    send POST request to `localhost:8080/addresses/0x87631B45877794f9cdd50a70c827403e3C36d072`
-    with body
-    ```json
-    {
-    "address": "0x87631B45877794f9cdd50a70c827403e3C36d072",
-    "labels": ["eoa"]
-    
-    }
-    ```
-
-    get an address:
-
-    send GET request to `localhost:8081/addresses/0x87631B45877794f9cdd50a70c827403e3C36d072`   
+    - get an address:
+        send GET request to `localhost:8081/addresses/0x87631B45877794f9cdd50a70c827403e3C36d072`   
 ## REST API endpoints
 - port: `localhost:8080`
 - `/addresses`: `GET`
