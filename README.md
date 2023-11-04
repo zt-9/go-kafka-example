@@ -60,7 +60,7 @@ main applications for this project
 kafka producer. it sends messages to kafka.
 - `/cmd/consumer`
 kafka consumer. It process the received 
-- `config`
+- `/config`
 configuration
 - `/pkg/controllers`
 controllers that handles api endpoints request
