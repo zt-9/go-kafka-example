@@ -15,19 +15,19 @@ The producer, operating on port 8080, receives REST API requests from users, sen
 - [echo](https://echo.labstack.com/): Go web framework used to build REST APIs
 - [redis](https://redis.uptrace.dev/guide/go-redis.html): for in-memory database
 ## Run the application
-1. start docker img: 
+1. Start docker: 
     ```bash
     make run/docker
     ```
-2. start the producer in a new terminal
+2. Start the producer in a new terminal
     ```bash
     make run/producer
     ```
-3. start the consumer in a new terminal
+3. Start the consumer in a new terminal
     ```bash
     make run/consumer
     ```
-4. send api requests to localhost:8080
+4. Send API requests to `localhost:8080`
    
     For example:
    
@@ -43,7 +43,7 @@ The producer, operating on port 8080, receives REST API requests from users, sen
         ```
 
     - get an address:
-        send GET request to `localhost:8081/addresses/0x87631B45877794f9cdd50a70c827403e3C36d072`   
+        send GET request to `localhost:8080/addresses/0x87631B45877794f9cdd50a70c827403e3C36d072`   
 ## REST API endpoints
 - port: `localhost:8080`
 - `/addresses`: `GET`
