@@ -1,12 +1,10 @@
 # go-kafka-example
 Data processing with Apache Kafka, REST API and Redis.
 
-We process blockchain on-chain data with Apache Kafka. 
-There are three topics: "address", "label" and "transaction". We have one producer and one consumer listen to and process these topics.
-We use Redis as in memory database to store data.
+This project involves processing on-chain blockchain data using Apache Kafka, REST API, and Redis.
+There are three topics: "address", "label" and "transaction". Those topics are handled by a single producer and consumer.
 
-The producer runs on port 8080 and the consumer runs on port 8081. 
-Users send REST API requests to producer. Producer then send messages to consumer.
+The producer, operating on port 8080, receives REST API requests from users, sending the respective messages to the consumer (port 8081). Redis is used as the in-memory database to store this data.
 
 
 ## Prerequistes
@@ -14,8 +12,8 @@ Users send REST API requests to producer. Producer then send messages to consume
 ## stack
 - [bitnami/kafka](https://hub.docker.com/r/bitnami/kafka): kafka docker image
 - [ibm/sarama](https://github.com/IBM/sarama): Go library for Apache Kafka
-- [echo](https://echo.labstack.com/): go webframework. We used it to build REST API.
-- [redis](https://redis.uptrace.dev/guide/go-redis.html): for in memory database
+- [echo](https://echo.labstack.com/): Go web framework used to build REST APIs
+- [redis](https://redis.uptrace.dev/guide/go-redis.html): for in-memory database
 ## Run the application
 1. start docker img: 
     ```bash
