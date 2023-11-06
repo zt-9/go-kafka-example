@@ -73,9 +73,9 @@ kafka producer. it sends messages to kafka.
 kafka consumer. It process the received 
 - `/config`
 configuration
-- `/pkg/controllers`
+- `/controllers`
 controllers that handles api endpoints request
-- `/pkg/models`
+- `/models`
 data structures and models used in REST API
 - `/utils`
 util/helper functions

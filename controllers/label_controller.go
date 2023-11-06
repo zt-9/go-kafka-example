@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"go-kafka-example/pkg/models"
+	"go-kafka-example/models"
 	"net/http"
 
 	"github.com/labstack/echo/v4"

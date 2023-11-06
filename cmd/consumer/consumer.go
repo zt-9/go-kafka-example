@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"go-kafka-example/config"
-	"go-kafka-example/pkg/models"
+	"go-kafka-example/models"
 	"go-kafka-example/utils"
 	"log"
 	"net/http"
