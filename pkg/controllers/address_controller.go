@@ -3,6 +3,7 @@ package controllers
 import (
 	"encoding/json"
 	"fmt"
+	"go-kafka-example/config"
 	"go-kafka-example/pkg/models"
 	"net/http"
 
@@ -13,7 +14,7 @@ import (
 )
 
 var client = redis.NewClient(&redis.Options{
-	Addr:     "localhost:6379",
+	Addr:     config.RedisServerAddr,
 	Password: "", // no password set
 	DB:       0,  // use default DB
 })

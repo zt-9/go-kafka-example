@@ -3,6 +3,7 @@ package models
 import (
 	"context"
 	"encoding/json"
+	"go-kafka-example/config"
 	"sync"
 
 	"github.com/redis/go-redis/v9"
@@ -17,7 +18,7 @@ type MetadataDB[T DataType] struct {
 }
 
 var client = redis.NewClient(&redis.Options{
-	Addr:     "localhost:6379",
+	Addr:     config.RedisServerAddr,
 	Password: "", // no password set
 	DB:       0,  // use default DB
 })
