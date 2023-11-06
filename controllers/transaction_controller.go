@@ -3,7 +3,7 @@ package controllers
 import (
 	"encoding/json"
 	"fmt"
-	"go-kafka-example/pkg/models"
+	"go-kafka-example/models"
 	"net/http"
 
 	"github.com/IBM/sarama"

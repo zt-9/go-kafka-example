@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	"go-kafka-example/config"
-	"go-kafka-example/pkg/controllers"
-	"go-kafka-example/pkg/models"
+	"go-kafka-example/controllers"
+	"go-kafka-example/models"
 	"log"
 
 	"github.com/IBM/sarama"

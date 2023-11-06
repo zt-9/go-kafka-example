@@ -2,7 +2,7 @@ package utils
 
 import (
 	"fmt"
-	"go-kafka-example/pkg/models"
+	"go-kafka-example/models"
 )
 
 func HasDuplication(target string, arr []string) bool {
