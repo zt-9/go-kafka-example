@@ -1,3 +1,13 @@
+# install
+.PHONY: install
+install:
+	go install ./...
+
+# test
+.PHONY: test
+test:
+	go test ./...
+
 # docker
 .PHONY: run/docker
 run/docker:
